@@ -38,3 +38,12 @@ projects[features][version] = 1
 
 projects[backup_migrate][subdir] = "contrib"
 projects[backup_migrate][version] = 2.1
+
+projects[imagemagick][subdir] = "contrib"
+projects[imagemagick][version] = 1
+
+projects[context][subdir] = "contrib"
+projects[context][version] = 1
+
+projects[libraries][subdir] = "contrib"
+projects[libraries][version] = 1
