@@ -4,8 +4,8 @@ api = 2
 ;core
 projects[drupal][version] = "7.0"
 projects[drupal][type] = "core"
-projects[drupal][download][type] = "get"
-projects[drupal][download][url] = "http://ftp.drupal.org/files/projects/drupal-7.0.tar.gz"
+projects[drupal][download][type] = "git"
+projects[drupal][download][url] = "http://git.drupal.org/project/drupal.git"
 
 ;Contrib projects 
 projects[ctools][subdir] = "contrib"
