@@ -58,14 +58,14 @@ projects[media][version] = 1
 projects[media_youtube][subdir] = "contrib"
 projects[media_youtube][version] = 1
 
-projects[styles] = "contrib"
-projects[styles] = 2
+projects[styles][subdir] = "contrib"
+projects[styles][version] = 2
 
 projects[ckeditor][subdir] = "contrib"
 projects[ckeditor][version] = 1.1
 
-projects[ldap] = "contrib"
-projects[ldap] = 1
+projects[ldap][subdir] = "contrib"
+projects[ldap][version] = 1
 
 projects[metatags_quick][subdir] = "contrib"
 projects[metatags_quick][version] = 1.7
