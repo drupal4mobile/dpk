@@ -2,9 +2,10 @@ core = 7.x
 api = 2
 
 ;core
-projects[drupal][version] = "7.0"
+projects[drupal][version] = "7.x"
 projects[drupal][type] = "core"
 projects[drupal][download][type] = "git"
+projects[drupal][download][revision] = "HEAD"
 projects[drupal][download][url] = "http://git.drupal.org/project/drupal.git"
 
 ;Contrib projects 
