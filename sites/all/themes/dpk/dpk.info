@@ -1,0 +1,13 @@
+name = DPK
+description = A Theme.
+package = DPK
+version = VERSION
+core = 7.x
+stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
+
+; Information added by drupal.org packaging script on 2011-01-05
+version = "7.0"
+
+features[] = main_menu
+features[] = secondary_menu
