@@ -73,6 +73,8 @@ projects[metatags_quick][version] = 1.7
 projects[diff][subdir] = 'contrib'
 projects[diff][version] = 2
 
+projects[migrate][subdir] = 'contrib'
+projects[migrate][version] = 2
 
 ; Libraries
 libraries[jquery_cycle][download][type] = "get"
