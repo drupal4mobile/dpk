@@ -11,6 +11,7 @@ body {
   background: white;
   font: 76%/170% Verdana, sans-serif;
   color: #494949;
+  overflow:auto;
 }
 
 input {
@@ -351,10 +352,12 @@ span.form-required {
 /**
  * Layout
  */
-#main-header { background: #aaa; position: relative; height: 100px; }
-#main-header h1 { width: 353px; height: 89px; text-indent: -9999px; 
+#main-header { background: #aaa;  height: 110px;  }
+#main-header .container { width: 1000px; margin: 0px auto; position: relative; height: 110px; }
+#main-header h1 { position: absolute; top: 10px; left: -10px;  }
+#main-header h1 a { width: 296px; height: 108px; text-indent: -9999px; display:block; 
 		background: transparent url(../images/logo.png) no-repeat center center; 
-		position: absolute; top: 10px; left: 20px; }
+		}
 .region-header {
   min-height: 1em;
   background: #d2e6f3 url(images/bg-navigation.png) repeat-x 50% 100%;
@@ -554,8 +557,8 @@ body.two-sidebars #squeeze {
   min-height: 400px;
 }
 
-footer { height: 100px; background: #333; text-align: center; color: white; }
-footer a { color: white; }
+footer#main-footer { height: 100px; background: #333; text-align: center; color: white; }
+footer#main-footer a { color: white; }
 
 #wrapper #container .region-footer {
   float: none;
@@ -656,7 +659,7 @@ ul.main-menu {
   margin: 0;
   padding: 0;
   position: absolute;
-  right: 0px; bottom: 5px; 
+  right: -10px; bottom: 5px; 
   z-index: 4;
 }
 
@@ -1175,6 +1178,32 @@ tr.taxonomy-term-divider-bottom {
 .theme-selector .operations li {
   list-style-image: none;
 }
+
+ul.tabs.primary {
+	
+}
+ul.tabs.primary li {
+	background-color: #ccc; padding: 5px 5px;
+	-khtml-border-radius-topleft: 6px;
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+  -khtml-border-radius-topright: 6px;
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+  
+}
+ul.tabs.primary li.active { 
+	 background-color: #666;
+	}
+ul.tabs.primary li a {
+	color: black;
+}
+ul.tabs.primary li.active a {
+	color: white;
+}
+
 
 /**
  * CSS support
