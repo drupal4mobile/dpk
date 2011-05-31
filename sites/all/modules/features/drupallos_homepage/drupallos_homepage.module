@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drupallos Homepage feature.
+ */
+
+include_once('drupallos_homepage.features.inc');
