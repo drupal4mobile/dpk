@@ -1,10 +1,11 @@
-name = DPK
+name = dpk
 description = A Theme.
 package = DPK
 version = VERSION
 core = 7.x
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
+stylesheets[screen and (max-device-width: 480px)][] = css/style_480.css
 
 ; Information added by drupal.org packaging script on 2011-01-05
 version = "7.0"

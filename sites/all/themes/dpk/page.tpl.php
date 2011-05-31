@@ -1,20 +1,22 @@
 	<?php print render($page['header']); ?>
 	<header id="main-header" class="clearfix">
-		<h1>Drupal@REI</h1>
-		<nav id="menu">
-			<?php if ($primary_nav): print $primary_nav; endif; ?>
-	        <?php if ($secondary_nav): print $secondary_nav; endif; ?>
-		</nav>
-		<?php if (isset($main_menu)) { ?>
-			<?php print theme('links', $main_menu, array('class' => 'links', 'id' => 'main')) ?>
-		<?php } ?>
-		<?php if (isset($secondary_menu)) { ?>
-			<?php print theme('links', $secondary_menu, array('class' => 'links', 'id' => 'secondary')); ?>
-		<?php } ?>
-		<?=$search_form;?>
+		<div class="container">
+			<h1><?=l($site_name, "<front>");?></h1>
+			<nav id="menu">
+				<?php if ($primary_nav): print $primary_nav; endif; ?>
+		        <?php if ($secondary_nav): print $secondary_nav; endif; ?>
+			</nav>
+			<?php if (isset($main_menu)) { ?>
+				<?php print theme('links', $main_menu, array('class' => 'links', 'id' => 'main')) ?>
+			<?php } ?>
+			<?php if (isset($secondary_menu)) { ?>
+				<?php print theme('links', $secondary_menu, array('class' => 'links', 'id' => 'secondary')); ?>
+			<?php } ?>
+			<?=$search_form;?>
+		</div>
 	</header>
 	
-	<section id="main">
+	<section id="main" class="clearfix">
 		<?php if ($page['sidebar_first']): ?>
 	      <aside id="sidebar-first" class="sidebar">
 	        <?php print render($page['sidebar_first']); ?>
@@ -41,7 +43,7 @@
 	    <?php endif; ?>
 	</section>
 	
-	<footer>
+	<footer id="main-footer" class="clearfix">
 		<?php print $feed_icons ?>
         <?php print render($page['footer']); ?>
 	</footer>
