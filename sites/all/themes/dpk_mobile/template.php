@@ -3,7 +3,7 @@
 /**
  * Changes the default meta content-type tag to the shorter HTML5 version
  */
-function dpk_html_head_alter(&$head_elements) {
+function dpk_mobile_html_head_alter(&$head_elements) {
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'
   );
@@ -14,7 +14,7 @@ function dpk_html_head_alter(&$head_elements) {
  * Lifted from Adaptivetheme for D7, full credit to Jeff Burnz
  * ref: http://drupal.org/node/887600
  */
-function dpk_preprocess_html(&$vars) {
+function dpk_mobile_preprocess_html(&$vars) {
 	global $cookie_domain;
 	drupal_add_library("system", "jquery.cookie");
 	drupal_add_js(array("cookie_domain" => $cookie_domain), "setting");
@@ -37,8 +37,7 @@ function dpk_preprocess_html(&$vars) {
 /**
  * Override or insert variables into the page template.
  */
-function dpk_preprocess_page(&$vars) {
-
+function dpk_mobile_preprocess_page(&$vars) {
   // Move secondary tabs into a separate variable.
   $vars['tabs2'] = array(
     '#theme' => 'menu_local_tasks',
@@ -94,7 +93,7 @@ function dpk_preprocess_page(&$vars) {
 	//print_r($search);
 	
   $vars["search_form"] = drupal_render($search); 
-	dpk_preprocess_search_block_form($vars);
+	dpk_mobile_preprocess_search_block_form($vars);
 
 
 }
@@ -102,6 +101,6 @@ function dpk_preprocess_page(&$vars) {
 /**
  * Changes the search form to use the HTML5 "search" input attribute
  */
-function dpk_preprocess_search_block_form(&$vars) {
+function dpk_mobile_preprocess_search_block_form(&$vars) {
   $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
 }

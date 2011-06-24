@@ -32,7 +32,7 @@
  * @see template_preprocess_html()
  * @see template_process()
  */
-?><?php print $doctype; ?>
+?><?php print $doctype; global $cookie_domain; ?>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf->version . $rdf->namespaces; ?>>
 <head<?php print $rdf->profile; ?>>
 	<meta name="viewport" content="width=device-width, user-scalable=no" />

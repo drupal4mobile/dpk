@@ -1335,3 +1335,10 @@ body.front .block-views h2 { text-transform: uppercase; color: #006699; backgrou
 	margin: 0px; text-align: left; height: 10px; 
 	padding: 10px 0px 10px 10px;  }
 body.front .block-views .view-content { padding: 10px; }
+
+.block-domain-nav { }
+.block-domain-nav ul { }
+.block-domain-nav ul li { display: inline-block;  border-left: 1px solid white;}
+.block-domain-nav ul li:first-child { border-left: 0px none;}
+.block-domain-nav ul li a { display: block; margin: 0px 5px; padding: 0px 5px; }
+.block-domain-nav ul li:first-child a { margin: 0px; padding: 0px; }

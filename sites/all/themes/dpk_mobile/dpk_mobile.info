@@ -1,0 +1,19 @@
+name = "DPK Mobile"
+description = "Ideal for small devices and/or for low-bandwidth consumers."
+core = 7.x
+engine = phptemplate
+regions[help] = Help
+regions[navigation] = Navigation
+regions[content] = Content
+
+stylesheets[all][] = css/global.css
+stylesheets[screen and (orientation:landscape)][] = css/landscape.css
+stylesheets[screen and (orientation:portrait)][] = css/portrait.css
+scripts[] = js/global.js
+
+; Information added by drupal.org packaging script on 2010-12-11
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "mobile"
+datestamp = "1292026750"
+
