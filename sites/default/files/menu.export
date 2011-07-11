@@ -1,0 +1,2397 @@
+array(
+  array(
+    'vid' => '18',
+    'uid' => '1',
+    'title' => 'Meatball Sub',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '18',
+    'type' => 'sandwich',
+    'language' => 'und',
+    'created' => '1304299016',
+    'changed' => '1304299050',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304299050',
+    'revision_uid' => '1',
+    'body' => array(),
+    'field_regular' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '4.99',
+        ),
+      ),
+    ),
+    'field_footlong' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '7.99',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304299016',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '2',
+    'uid' => '1',
+    'title' => 'Three Meatballs ',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '2',
+    'type' => 'menu_item',
+    'language' => 'und',
+    'created' => '1304286760',
+    'changed' => '1304297730',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304297730',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'with marinara sauce',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>with marinara sauce</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_price' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '5.75',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304286760',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '16',
+    'uid' => '1',
+    'title' => 'Each Topping',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '16',
+    'type' => 'pizza',
+    'language' => 'und',
+    'created' => '1304294101',
+    'changed' => '1304296059',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304296059',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Pepperoni - Sausage - Meatballs - Bacon - Ham - Mushrooms - Peppers - Onion - Black Olives - Green Olives- Broccoli - Spinach - Eggplant - Jalepenos - Tomatoes - Pineapple - Fresh Basil - Fresh Garlic - Anchovies - Banana Peppers ',
+          'summary' => '',
+          'format' => 'full_html',
+          'safe_value' => '<p>Pepperoni - Sausage - Meatballs - Bacon - Ham - Mushrooms - Peppers - Onion - Black Olives - Green Olives- Broccoli - Spinach - Eggplant - Jalepenos - Tomatoes - Pineapple - Fresh Basil - Fresh Garlic - Anchovies - Banana Peppers </p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_slice' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '0.50',
+        ),
+      ),
+    ),
+    'field_small' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '1.35',
+        ),
+      ),
+    ),
+    'field_medium' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '1.65',
+        ),
+      ),
+    ),
+    'field_large' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '1.90',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304294101',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '17',
+    'uid' => '1',
+    'title' => 'Pizza',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '17',
+    'type' => 'menu_item_group',
+    'language' => 'und',
+    'created' => '1304294249',
+    'changed' => '1304294259',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304294259',
+    'revision_uid' => '1',
+    'field_items' => array(
+      'und' => array(
+        '0' => array(
+          'nid' => '15',
+        ),
+        '1' => array(
+          'nid' => '16',
+        ),
+      ),
+    ),
+    'field_sort_weight' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '4',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304294249',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '15',
+    'uid' => '1',
+    'title' => 'Cheese Pizza',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '15',
+    'type' => 'pizza',
+    'language' => 'und',
+    'created' => '1304293999',
+    'changed' => '1304293999',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304293999',
+    'revision_uid' => '1',
+    'body' => array(),
+    'field_slice' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '2.25',
+        ),
+      ),
+    ),
+    'field_small' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '11.75',
+        ),
+      ),
+    ),
+    'field_medium' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '12.95',
+        ),
+      ),
+    ),
+    'field_large' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '13.95',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304293999',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '14',
+    'uid' => '1',
+    'title' => 'Salads',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '14',
+    'type' => 'menu_item_group',
+    'language' => 'und',
+    'created' => '1304293307',
+    'changed' => '1304293307',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304293307',
+    'revision_uid' => '1',
+    'field_items' => array(
+      'und' => array(
+        '0' => array(
+          'nid' => '13',
+        ),
+        '1' => array(
+          'nid' => '12',
+        ),
+        '2' => array(
+          'nid' => '11',
+        ),
+        '3' => array(
+          'nid' => '10',
+        ),
+      ),
+    ),
+    'field_sort_weight' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '3',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304293307',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '13',
+    'uid' => '1',
+    'title' => 'Caprese Salad',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '13',
+    'type' => 'menu_item',
+    'language' => 'und',
+    'created' => '1304293239',
+    'changed' => '1304293239',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304293239',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Fresh sliced mozzarella with vine-ripened tomatoes, roasted red peppers, fresh basil and drizzled with olive oil and a balsamic reduction glaze',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Fresh sliced mozzarella with vine-ripened tomatoes, roasted red peppers, fresh basil and drizzled with olive oil and a balsamic reduction glaze</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_price' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '9.95',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304293239',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '12',
+    'uid' => '1',
+    'title' => 'Chef Salad ',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '12',
+    'type' => 'menu_item',
+    'language' => 'und',
+    'created' => '1304293201',
+    'changed' => '1304293201',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304293201',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Crisp romaine with tomatoes, olives, ham, smoked turkey, salami, roast beef, provolone cheese, boiled egg and house vinaigrette',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Crisp romaine with tomatoes, olives, ham, smoked turkey, salami, roast beef, provolone cheese, boiled egg and house vinaigrette</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_price' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '9.95',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304293201',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '11',
+    'uid' => '1',
+    'title' => 'Italian Antipasti Salad',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '11',
+    'type' => 'menu_item',
+    'language' => 'und',
+    'created' => '1304293167',
+    'changed' => '1304293167',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304293167',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Crisp romaine, tomatoes, roasted red peppers, olives, prosciutto, salami, pepperoni, provolone cheese and house vinaigrette',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Crisp romaine, tomatoes, roasted red peppers, olives, prosciutto, salami, pepperoni, provolone cheese and house vinaigrette</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_price' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '9.95',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304293167',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '10',
+    'uid' => '1',
+    'title' => 'Grilled Chicken and Arugula Salad',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '10',
+    'type' => 'menu_item',
+    'language' => 'und',
+    'created' => '1304293143',
+    'changed' => '1304293143',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304293143',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Boneless chicken breast grilled tender, with tomato, cucumbers, and house vinaigrette',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Boneless chicken breast grilled tender, with tomato, cucumbers, and house vinaigrette</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_price' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '9.95',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304293143',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '8',
+    'uid' => '1',
+    'title' => 'Soup',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '8',
+    'type' => 'menu_item_group',
+    'language' => 'und',
+    'created' => '1304290689',
+    'changed' => '1304291218',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304291218',
+    'revision_uid' => '1',
+    'field_items' => array(
+      'und' => array(
+        '0' => array(
+          'nid' => '6',
+        ),
+        '1' => array(
+          'nid' => '7',
+        ),
+        '2' => array(
+          'nid' => '9',
+        ),
+      ),
+    ),
+    'field_sort_weight' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '2',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304290689',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '9',
+    'uid' => '1',
+    'title' => 'Italian Wedding',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '9',
+    'type' => 'soup',
+    'language' => 'und',
+    'created' => '1304291187',
+    'changed' => '1304291187',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304291187',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Prepared with meatballs and chicken in the traditional way',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Prepared with meatballs and chicken in the traditional way</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_cup' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '2.95',
+        ),
+      ),
+    ),
+    'field_bowl' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '5.50',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304291187',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '5',
+    'uid' => '1',
+    'title' => 'Appetizers',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '5',
+    'type' => 'menu_item_group',
+    'language' => 'und',
+    'created' => '1304287903',
+    'changed' => '1304291083',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304291083',
+    'revision_uid' => '1',
+    'field_items' => array(
+      'und' => array(
+        '0' => array(
+          'nid' => '1',
+        ),
+        '1' => array(
+          'nid' => '4',
+        ),
+        '2' => array(
+          'nid' => '2',
+        ),
+        '3' => array(
+          'nid' => '3',
+        ),
+      ),
+    ),
+    'field_sort_weight' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '1',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304287903',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '7',
+    'uid' => '1',
+    'title' => 'Minestrone',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '7',
+    'type' => 'soup',
+    'language' => 'und',
+    'created' => '1304290180',
+    'changed' => '1304290180',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304290180',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Hearty Vegetable with Pancetta',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Hearty Vegetable with Pancetta</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_cup' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '2.95',
+        ),
+      ),
+    ),
+    'field_bowl' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '5.50',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304290180',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '6',
+    'uid' => '1',
+    'title' => 'Pasta e Fagioli',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '6',
+    'type' => 'soup',
+    'language' => 'und',
+    'created' => '1304288924',
+    'changed' => '1304288924',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304288924',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Delicious, made with beans, pasta, and pancetta	',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Delicious, made with beans, pasta, and pancetta</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_cup' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '2.50',
+        ),
+      ),
+    ),
+    'field_bowl' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '5.50',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304288924',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '4',
+    'uid' => '1',
+    'title' => 'Fried Calamari',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '4',
+    'type' => 'menu_item',
+    'language' => 'und',
+    'created' => '1304286950',
+    'changed' => '1304286950',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304286950',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Served with marinara sauce and a lemon wedge',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Served with marinara sauce and a lemon wedge</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_price' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '7.95',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304286950',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '3',
+    'uid' => '1',
+    'title' => 'Mozzarella Triangles',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '3',
+    'type' => 'menu_item',
+    'language' => 'und',
+    'created' => '1304286912',
+    'changed' => '1304286912',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304286912',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Homemade with Drupallo\'s Old World Marinara',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Homemade with Drupallo\'s Old World Marinara</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_price' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '5.50',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304286912',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+    array(
+    'vid' => '1',
+    'uid' => '1',
+    'title' => 'Grilled Bruschetta Rosa',
+    'log' => '',
+    'status' => '1',
+    'comment' => '1',
+    'promote' => '0',
+    'sticky' => '0',
+    'ds_switch' => '',
+    'nid' => '1',
+    'type' => 'menu_item',
+    'language' => 'und',
+    'created' => '1304286690',
+    'changed' => '1304286690',
+    'tnid' => '0',
+    'translate' => '0',
+    'revision_timestamp' => '1304286690',
+    'revision_uid' => '1',
+    'body' => array(
+      'und' => array(
+        '0' => array(
+          'value' => 'Slices of toasted Italian bread with fresh tomatoes and basil.',
+          'summary' => '',
+          'format' => 'filtered_html',
+          'safe_value' => '<p>Slices of toasted Italian bread with fresh tomatoes and basil.</p>
+',
+          'safe_summary' => '',
+        ),
+      ),
+    ),
+    'field_price' => array(
+      'und' => array(
+        '0' => array(
+          'value' => '5.95',
+        ),
+      ),
+    ),
+    'rdf_mapping' => array(
+      'rdftype' => array(
+        '0' => 'sioc:Item',
+        '1' => 'foaf:Document',
+      ),
+      'title' => array(
+        'predicates' => array(
+          '0' => 'dc:title',
+        ),
+      ),
+      'created' => array(
+        'predicates' => array(
+          '0' => 'dc:date',
+          '1' => 'dc:created',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'changed' => array(
+        'predicates' => array(
+          '0' => 'dc:modified',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+      'body' => array(
+        'predicates' => array(
+          '0' => 'content:encoded',
+        ),
+      ),
+      'uid' => array(
+        'predicates' => array(
+          '0' => 'sioc:has_creator',
+        ),
+        'type' => 'rel',
+      ),
+      'name' => array(
+        'predicates' => array(
+          '0' => 'foaf:name',
+        ),
+      ),
+      'comment_count' => array(
+        'predicates' => array(
+          '0' => 'sioc:num_replies',
+        ),
+        'datatype' => 'xsd:integer',
+      ),
+      'last_activity' => array(
+        'predicates' => array(
+          '0' => 'sioc:last_activity_date',
+        ),
+        'datatype' => 'xsd:dateTime',
+        'callback' => 'date_iso8601',
+      ),
+    ),
+    'cid' => '0',
+    'last_comment_timestamp' => '1304286690',
+    'last_comment_name' => NULL,
+    'last_comment_uid' => '1',
+    'comment_count' => '0',
+    'domains' => array(
+      '-1' => -1,
+    ),
+    'domain_site' => TRUE,
+    'subdomains' => array(
+      '0' => 'All affiliates',
+      '1' => 'Drupallos Pizza Kitchen',
+    ),
+    'domain_source' => '0',
+    'locations' => array(),
+    'location' => array(),
+    'name' => 'admin',
+    'picture' => '0',
+    'data' => 'a:1:{s:7:"overlay";i:1;}',
+    'menu' => array(
+      'link_title' => '',
+      'mlid' => 0,
+      'plid' => 0,
+      'menu_name' => 'main-menu',
+      'weight' => 0,
+      'options' => array(),
+      'module' => 'menu',
+      'expanded' => 0,
+      'hidden' => 0,
+      'has_children' => 0,
+      'customized' => 0,
+      'parent_depth_limit' => 8,
+      'enabled' => 1,
+    ),
+    'node_export_drupal_version' => '7',
+    '#_export_node_encode_object' => '1',
+  ),
+)
