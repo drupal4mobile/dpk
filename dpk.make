@@ -45,13 +45,6 @@ projects[webform][subdir] = "contrib"
 
 
 
-
-
-
-
-
-
-
 ; Libraries
 libraries[jquery_cycle][download][type] = "get"
 libraries[jquery_cycle][download][url] = "http://www.malsup.com/jquery/cycle/release/jquery.cycle.zip?v2.86"
@@ -59,7 +52,7 @@ libraries[jquery_cycle][directory_name] = "jquery.cycle"
 libraries[jquery_cycle][destination] = "libraries"
 
 libraries[json2][download][type] = "git"
-libraries[json2][download][url] = "https://github.com/douglascrockford/JSON-js"
+libraries[json2][download][url] = "git://github.com/douglascrockford/JSON-js.git"
 libraries[json2][directory_name] = "json2"
 libraries[json2][destination] = "libraries"
 
