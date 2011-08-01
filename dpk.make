@@ -28,9 +28,9 @@ projects[jquery_update][subdir] = 'contrib'
 projects[libraries][subdir] = "contrib"
 projects[location][subdir] = "contrib"
 projects[media][subdir] = "contrib"
-projects[media][version] = "7.x-2.x-dev"
+projects[media][version] = "2.x-dev"
 projects[media_youtube][subdir] = "contrib"
-projects[media_youtube][version] ="7.x-1.x-dev"
+projects[media_youtube][version] ="1.x-dev"
 projects[mediaelement][subdir] = "contrib"
 projects[metatags_quick][subdir] = "contrib"
 projects[node_export][subdir] = 'contrib'
@@ -64,12 +64,12 @@ libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][destination] = "libraries"
 
 libraries[mediaelement][download][type] = "git"
-libraries[mediaelement][download][url] = "git://github.com/johndyer/mediaelement.git
+libraries[mediaelement][download][url] = 'git://github.com/johndyer/mediaelement.git'
 libraries[mediaelement][directory_name] = 'mediaelement'
 libraries[mediaelement][destination] = 'libraries'
 
-libraries[highcharts][download][type] = "get"
-libraries[highcharts][download][url] = "http://www.highcharts.com/downloads/zips/Highcharts-2.1.6.zip"
-libraries[highcharts][directory_name] = "highcharts"
-libraries[highcharts][destination] = "libraries"
+libraries[highcharts][download][type] = 'get'
+libraries[highcharts][download][url] = 'http://www.highcharts.com/downloads/zips/Highcharts-2.1.6.zip'
+libraries[highcharts][directory_name] = 'highcharts'
+libraries[highcharts][destination] = 'libraries'
 
