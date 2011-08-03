@@ -1,0 +1,13 @@
+name = "Views Highcharts"
+package = "Views"
+description = "Views formatter to produce highchart"
+core = 7.x
+version = "7.x-.03-prealpha"
+dependencies[] = views
+
+
+dependencies[] = "libraries"
+files[] = views_highcharts.module
+files[] = theme/views_highcharts.theme.inc
+files[] = views_highcharts.views.inc
+files[] = views_highcharts_plugin_style_highcharts.inc

@@ -1,0 +1,36 @@
+<?php 
+
+/**
+ * Implements hook_views_api().
+ */
+function views_highcharts_views_api() {
+  return array(
+    'api' => '3.0-alpha1',
+  );
+}
+
+
+function views_highcharts_init() {
+	module_load_include("module", "libraries", "libraries");
+	if ($path = libraries_get_path("highcharts")) {
+		drupal_add_js($path .'/js/highcharts.js');
+	}
+	drupal_add_js(drupal_get_path('module', 'widget_highcharts') .'/js/highcharts-globals.js');
+	
+	
+}
+
+function views_highcharts_theme() {
+	$toReturn = array();
+	
+	
+	return $toReturn;
+	
+}
+
+function views_highcharts_theme_registry_alter($registry){
+
+	
+}
+
+
