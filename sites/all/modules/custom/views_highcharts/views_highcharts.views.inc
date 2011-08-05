@@ -1,6 +1,4 @@
 <?php
-
-
 function views_highcharts_views_plugins() {
   return array(
     'style' => array(
@@ -21,3 +19,12 @@ function views_highcharts_views_plugins() {
     ),
   );
 }
+
+function views_highcharts_views_data_alter(&$data) {
+  foreach ($data as $key => $item) {
+    if (strpos($key, 'field_data') !== FALSE) {
+      $data[$key][$item['entity_id']['field']['moved to']['1']]['field']['add fields to query'] = 'TRUE';
+    }
+  }
+}
+
