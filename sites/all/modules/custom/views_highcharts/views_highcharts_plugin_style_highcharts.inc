@@ -1,8 +1,8 @@
 <?php
-
+// $Id$
 /**
  * @file
- * Contains the list style plugin.
+ * Contains the highcharts style plugin.
  */
 
 /**
@@ -24,6 +24,10 @@ class views_highcharts_plugin_style_highcharts extends views_plugin_style_list {
       'value' => array('default' => 'Test Title'),
       'format' => array('default' => 'text'),
     );
+    $options['format']['contains']['subtitle']['contains']['text']['contains'] = array(
+      'value' => array('default' => 'Test Subtitle'),
+      'format' => array('default' => 'text'),
+    );
     $options['format']['contains']['chart']['contains']['type']['contains'] = array(
       'value' => array('default' => 'spline'),
       'format' => array('default' => 'text'),
@@ -36,9 +40,6 @@ class views_highcharts_plugin_style_highcharts extends views_plugin_style_list {
       'value' => array('default' => "'<b>'+this.series.name+'</b><br/>'+this.x+': '+this.y"),
       'format' => array('default' => 'function'),
     );
-
-
-
 
     // call every module using hook_views_slideshow_option_definition and merge
     // it's return value with the other default options.
@@ -59,7 +60,7 @@ class views_highcharts_plugin_style_highcharts extends views_plugin_style_list {
     $form['format']['chart']['type']['value'] = array(
       '#title' => t('Chart Type'),
       '#type' => 'select',
-      '#options' => array('spline' => 'Spline', 'line' => 'Line', 'bar' => 'Bar', 'area' => 'Area', 'areaspline' => 'Area Spline', 'column' => 'Column', 'pie' => 'Pie'),
+      '#options' => array( 'area' => 'Area', 'areaspline' => 'Area Spline', 'bar' => 'Bar', 'column' => 'Column', 'line' => 'Line',  'pie' => 'Pie', 'spline' => 'Spline' ),
       '#multiple' => FALSE,
       '#required' => TRUE,
       '#default_value' => $this->options['format']['chart']['type']['value'],
@@ -69,6 +70,12 @@ class views_highcharts_plugin_style_highcharts extends views_plugin_style_list {
       '#title' => t('Chart Title'),
       '#type' => 'textfield',
       '#default_value' => $this->options['format']['title']['text']['value'],
+    );
+
+    $form['format']['subtitle']['text']['value'] = array(
+      '#title' => t('Chart SubTitle'),
+      '#type' => 'textfield',
+      '#default_value' => $this->options['format']['subtitle']['text']['value'],
     );
 
     $form['format']['yAxis']['title']['text']['value'] = array(

@@ -1,32 +1,60 @@
 <?php
+// $Id$
+/**
+ * @file
+ * Plugin Theme File
+ */
 function template_preprocess_views_highcharts(&$vars) {
+  $chart_id = "views-highcharts-" . uuid_uuid();
 
-  $view   = $vars['view'];
-  $series = array();
-  $xAxis  = array();
+  $highcharts_config = json_decode(file_get_contents(drupal_get_path("module", "views_highcharts") . "/defaults/bar-basic.json"));
+  $highcharts_config->chart->defaultSeriesType = $vars['options']['format']['chart']['type']['value'];
+  $highcharts_config->title->text = $vars['options']['format']['title']['text']['value'];
+  $highcharts_config->subtitle->text = $vars['options']['format']['subtitle']['text']['value'];
+  $highcharts_config->yAxis->title->text = $vars['options']['format']['yAxis']['title']['text']['value'];
+
+  $highcharts_config->chart->renderTo = $chart_id;
+  $view = $vars['view'];
+  $highcharts_config->series = array();
+  $highcharts_config->xAxis->categories = array();
   $fields = $view->get_items("field");
-  foreach ($vars['options']['dataset']['data'] as $key) {
-		if ($key != false) {
-			$vars['fields']["field_" . $key] = $fields[$key];
-		}
+  if (is_array($vars['options'])
+    && is_array($vars['options']['dataset'])
+    && is_array($fields)
+  ) {
+    foreach ($vars['options']['dataset']['data'] as $key) {
+      if ($key != FALSE) {
+        $vars['fields']["field_" . $key] = $fields[$key];
+      }
+    }
   }
-  unset($key);
-  $series = array();
-  $data = array();
 
+  unset($key);
+  $data = array();
+  $highcharts_config->xAxis->categories = array();
   foreach ($view->result as $key => $result) {
-    $xAxis[] = $result->node_title;
+    if (isset($result->node_title)) {
+      $highcharts_config->xAxis->categories[] = $result->node_title;
+    }
     foreach ($vars['fields'] as $key => $field) {
       $data[$key][] = (int)$result->{$key}[0]['raw']['value'];
     }
   }
-  $vars['xAxis'] = json_encode($xAxis);
   unset($key);
+  $highcharts_config->series = array();
   foreach ($vars['fields'] as $key => $field) {
-    $item       = new stdClass;
+    $item = new stdClass;
     $item->name = $field['label'];
     $item->data = $data[$key];
-    $series[]   = $item;
+    $highcharts_config->series[] = $item;
   }
-  $vars["series"] = json_encode($series);
+  //print_r($vars['options']);
+  //exit();
+  $highcharts_config->tooltip->formatter = 'eval(function() {
+	return ' . $vars['options']['format']['tooltip']['formatter']['value'] . '; 
+	})';
+  //print_r($vars['options']);
+  drupal_add_js(array("views_highcharts" => array($chart_id => $highcharts_config)), "setting");
+  $vars['chart_id'] = $chart_id;
 }
+

@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * main module file
+ */
+
+/**
  * Implements hook_views_api().
  */
 function views_highcharts_views_api() {
@@ -14,7 +19,7 @@ function views_highcharts_init() {
   if ($path = libraries_get_path("highcharts")) {
     drupal_add_js($path . '/js/highcharts.js');
   }
-  drupal_add_js(drupal_get_path('module', 'widget_highcharts') . '/js/highcharts-globals.js');
+  drupal_add_js(drupal_get_path('module', 'views_highcharts') . '/js/views_highcharts.js');
 }
 
 function views_highcharts_theme() {
