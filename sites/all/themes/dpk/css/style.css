@@ -1342,3 +1342,12 @@ body.front .block-views .view-content { padding: 10px; }
 .block-domain-nav ul li:first-child { border-left: 0px none;}
 .block-domain-nav ul li a { display: block; margin: 0px 5px; padding: 0px 5px; }
 .block-domain-nav ul li:first-child a { margin: 0px; padding: 0px; }
+
+.close2u-list { 
+	-moz-column-count: 4;
+		-moz-column-gap: 1em;
+		-webkit-column-count: 4;
+		-webkit-column-gap: 1em;
+		column-count: 4;
+		column-gap: 1em;
+	}

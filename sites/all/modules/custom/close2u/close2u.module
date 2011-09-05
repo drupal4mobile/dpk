@@ -1,0 +1,179 @@
+<?php
+function close2u_menu() {
+  $items = array();
+  $items['close2u'] = array(
+    "page callback" => "close2u_page",
+    "page arguments" => array(2),
+    'access callback' => TRUE,
+    "type" => MENU_CALLBACK,
+  );
+  $items['close2u/find/node'] = array(
+    "page callback" => "close2u_find",
+    "page arguments" => array(2),
+    'access callback' => TRUE,
+    "type" => MENU_CALLBACK,
+  );
+  $items['close2u/marker/%node'] = array(
+    "page callback" => "close2u_marker_retrieve",
+    "page arguments" => array(2),
+    'access callback' => 'node_access',
+    'access arguments' => array('view', 2),
+    "type" => MENU_CALLBACK,
+  );
+	$items['close2u/address'] = array(
+	  "page callback" => "close2u_address_entry",
+	  "page arguments" => array(2),
+	  'access callback' => TRUE,
+	  "type" => MENU_CALLBACK,
+	);
+
+  return $items;
+}
+
+function close2u_theme() {
+  $path = drupal_get_path("module", "close2u") . "/templates";
+  $items = array();
+
+  $items['close2u_container'] = array(
+    "template" => "close2u_container",
+    "arguments" => array("uuid" => NULL, "delta" => NULL),
+    "path" => $path,
+  );
+  $items['close2u_list_item'] = array(
+    "template" => "close2u_list_item",
+    "arguments" => array("result" => NULL),
+    "path" => $path,
+  );
+  return $items;
+}
+
+if (!function_exists("f_load")) {
+  function f_load($f) {
+    return (float)$f;
+  }
+}
+
+function close2u_block_info($delta = 0) {
+  $blocks = array();
+  $blocks['find_node'] = array(
+    'info' => t('Close To You - Find Nodes'),
+    'status' => 1,
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  return $blocks;
+}
+
+function close2u_block_view($delta = 0) {
+  $block = array();
+  switch ($delta) {
+    default:
+      $block['subject'] = "Close To You";
+      $block['content'] = close2u_page($delta);
+  }
+  return $block;
+}
+
+function close2u_page($delta) {
+  module_load_include('inc', 'uuid', 'uuid');
+  $list_id = "close2u-" . uuid_generate();
+  drupal_add_js(array("close2u" => array("instances" => array($list_id))), "setting");
+  drupal_add_js(drupal_get_path("module", "close2u") . '/close2u.js');
+  return theme("close2u_container", array("list_id" => $list_id, "delta" => $delta));
+}
+
+
+//default search is nodes, but you can also search for users by type = 'uid'
+function close2u_find($type = "node", $origin = NULL) {
+  if ($origin == NULL) {
+    if (isset($_REQUEST['longitude']) && isset($_REQUEST["latitude"])) {
+      $origin = $_REQUEST;
+    }
+    elseif (property_exists($GLOBALS, "origin")) {
+      global $origin;
+    }
+    else {
+      drupal_set_message("in order to find something close to you, I must have an origin. Set \$GLOBALS\[\'origin\'\] or use as second argument to close2u_find.", "error");
+      return FALSE;
+    }
+  }
+  $query = db_select("location", "l")->fields("l", array("lid", "longitude", "latitude"));
+  module_load_include("inc", "location", "earth");
+  $query->addExpression(earth_distance_sql($origin['longitude'], $origin['latitude']), "distance");
+  $query->join("location_instance", "li", "li.lid = l.lid");
+  $query->fields("li");
+  $max_distance = (array_key_exists($origin['max_distance']) ?
+    $origin['max_distance'] : variable_get("close2u_default_max_distance", NULL)
+  );
+  if ($max_distance != NULL) {
+    $query->having("distance < :max_distance ", array(
+        ":max_distance" => $max_distance,
+      ));
+  }
+  $query->orderBy("distance");
+  $query->range(0, 20);
+  $foreign_alias = substr($type, 0, 1);
+  $foreign_key   = $foreign_alias . "id";
+  $join_clause   = "li." . $foreign_key . " = " . $foreign_alias . "." . $foreign_key;
+  $query->join($type, $foreign_alias, $join_clause);
+
+  $results = $query->execute();
+	if ($results->rowCount()) {
+		$toReturn = "<ul class='close2u-list'>";
+		while ($result = $results->fetchObject()) {
+		    $result->node = node_load($result->nid);
+		    $toReturn .= theme("close2u_list_item", array("result" => $result));
+		}
+		$toReturn .= "</ul>";
+	} else {
+		if ($max_distance != null) {
+			$toReturn = "<h1>Nothing withing {$max_distance} of the given location</h1>";
+		} else {
+			$toReturn = "<h1>No Results Found</h1>";
+		}
+	}
+  
+	
+  echo $toReturn;
+  exit();
+}
+
+function close2u_address_entry() {
+	module_load_include("module", "gmap", "gmap");
+    module_load_include("inc", "location", "geocoding/google");
+	$response = google_geocode_location(array("street" => $_REQUEST['close2u-enter-location-text']));
+	if (is_array($response)) {
+		echo json_encode(array("coords" => array("longitude"=> (float)$response['lon'], "latitude" => (float)$response['lat']), "timestamp" => time(), "list_id" => $_REQUEST['list_id']));
+	} else {
+		echo json_encode(array("error" => "<h1>Google is unable to find the location you entered.</h1>"));
+	}
+	exit();
+}
+
+
+function close2u_marker_retrieve($node) {
+	echo drupal_render(node_view($node, "marker"));
+	exit();
+}
+
+function close2u_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
+}
+
+function close2u_ds_view_modes_info() {
+  $export = array();
+
+  $ds_view_mode = new stdClass;
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'marker';
+  $ds_view_mode->label = 'Marker';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['mobile'] = $ds_view_mode;
+
+  return $export;
+}

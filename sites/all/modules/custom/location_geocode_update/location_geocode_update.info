@@ -1,0 +1,6 @@
+name = Location Geocode Update
+description = Adds action to update node location
+core = 7.x
+package = "Location"
+dependencies[] = location
+dependencies[] = gmap

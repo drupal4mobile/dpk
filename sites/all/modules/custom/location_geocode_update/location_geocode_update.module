@@ -1,0 +1,82 @@
+<?php
+// $Id$
+/**
+ * Implementation of hook_cron()
+ *
+ * Loads all the locations on the site which have invalid latitude/longitude,
+ * then uses the Google geocoder to update the latitude/longitude, if possible.
+ */
+function location_geocode_update_cron() {
+  // coming soon!
+
+}
+
+/**
+ * Implements hook_action_info().
+ * Provides an action to do same thing as cron job.
+ */
+function location_geocode_update_action_info() {
+  return array(
+    'location_geocode_update_lat_lon' => array(
+      'type' => 'node',
+      'label' => t('Update latitude/longitude'),
+      'configurable' => FALSE,
+      'hooks' => array(
+        'node' => array('presave'),
+      ),
+      'triggers' => array("node_presave"),
+    ),
+  );
+}
+
+function location_geocode_update_lat_lon(&$node, $context = array()) {
+  //Include Google geocoder (necessary to update node latitude/longitude)
+  module_load_include("module", "gmap", "gmap");
+  module_load_include("inc", "location", "geocoding/google");
+
+
+  $lid_query = 'select * from {location} loc where
+	                   (loc.lid in (select l.lid
+	                   from {location_instance} l, {node} n
+	                   where l.nid = :nid))';
+  $result = db_query($lid_query, array(":nid" => $node->nid));
+
+  while ($location = $result->fetchAssoc()) {
+    $old_latitude = $location['latitude'];
+    $old_longitude = $location['longitude'];
+    if (!empty($location) && ((float)$location['latitude'] + (float)$location['latitude'] == 0)) {
+      $google_location = google_geocode_location($location);
+    }
+    // Waits for 250000 microseconds to prevent Google throttling requests
+    //usleep(250000);
+    if (is_array($google_location)) {
+      $latitude  = $google_location['lat'];
+      $longitude = $google_location['lon'];
+      $lid       = $location['lid'];
+      // save the lid just updated so we can resume later
+      variable_set('location_geocode_update_starting_lid', $lid);
+      if (!is_null($latitude) && !is_null($longitude) && !($latitude == 0 && $longitude == 0) && $lid) {
+        $updated = db_query(
+          "UPDATE {location} SET latitude = :lattitude, longitude = :longitude, source = 1 WHERE lid = :lid",
+          array(
+            ":lattitude" => $latitude,
+            ":longitude" => $longitude,
+            ":lid" => $lid,
+          )
+        );
+        watchdog('location_geocode_update', 'Updated location %lid from %old_lat , %old_lon to %new_lat , %new_lon',
+          array('%lid' => $lid,
+            '%old_lat' => $old_latitude,
+            '%old_lon' => $old_longitude,
+            '%new_lat' => $latitude,
+            '%new_lon' => $longitude,
+          ), WATCHDOG_NOTICE
+        );
+      }
+      else {
+        watchdog('location_geocode_update', 'Failed to update location %lid', array('%lid' => $lid), WATCHDOG_NOTICE);
+      }
+    }
+  }
+}
+

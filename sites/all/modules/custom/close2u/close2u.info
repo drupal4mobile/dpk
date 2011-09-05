@@ -1,0 +1,8 @@
+name = close2u
+description = Uses location module to determine which entries are... anyone? Close2u. In block format, lists node teasers.
+core = 7.x
+dependencies[] = location
+dependencies[] = gmap
+dependencies[] = uuid
+features[ctools][] = "ds:ds:1"
+features[ds_view_modes][] = "marker"

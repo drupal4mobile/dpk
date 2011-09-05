@@ -1,0 +1,5 @@
+<?php
+function geocode_update_install() {
+  drupal_set_message("The Geocode Update module has been enabled. Please ensure that you have entered your Google Maps API key in the GMap module configuration settings.");
+}
+
