@@ -2,15 +2,7 @@ name = "Views Highcharts"
 package = "Views"
 description = "Views formatter to produce highchart"
 core = 7.x
-version = "7.x-.03-prealpha"
 dependencies[] = views
 dependencies[] = uuid
-
-
 dependencies[] = "libraries"
-files[] = views_highcharts.module
-files[] = views_highcharts.views.inc
 files[] = views_highcharts_plugin_style_highcharts.inc
-files[] = defaults/bar-basic.json
-files[] = theme/views_highcharts.theme.inc
-files[] = theme/views-highcharts.tpl.php

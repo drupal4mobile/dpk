@@ -1,0 +1,12 @@
+Install instructions:
+
+This install file makes the assumptions you have GIT version management, Drupal and a stable DRUSH environment. Drush is optional, but many of the instructions utilize it's features. 
+
+1. cd to your sites/all/libraries folder
+2. Enter the command 'git clone git://github.com/highslide-software/highcharts.com.git highcharts'
+3. If you haven't already, 'drush dl views_highcharts' should download the views_highcharts module to your sites/all/contrib folder
+4. Enable the module either by entering the drush command 'drush pm-enable views_highcharts'
+5. Create a view that returns one or more integer fields. as well as a title value for those fields.
+6. Under views "style plugin" choose "Highcharts"
+7. Under settings, chose the integer fields you want to appear in the series and the title column
+8. When you save the settings, you should be able to see the live preview of your new views_highcharts

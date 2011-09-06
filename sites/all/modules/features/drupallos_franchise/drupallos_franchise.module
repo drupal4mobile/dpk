@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drupallos Franchise feature.
+ */
+
+include_once('drupallos_franchise.features.inc');

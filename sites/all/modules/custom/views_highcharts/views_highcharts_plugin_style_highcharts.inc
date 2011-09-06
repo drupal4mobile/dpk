@@ -84,6 +84,15 @@ class views_highcharts_plugin_style_highcharts extends views_plugin_style_list {
       '#default_value' => $this->options['format']['yAxis']['title']['text']['value'],
     );
 
+    $form['format']['yAxis']['title']['align']['value'] = array(
+      '#title' => t('Y-Axis Title Align'),
+      '#type' => 'select',
+      '#options' => array( 'low' => 'Low', 'middle' => 'Middle', 'high'=> 'High' ),
+      '#multiple' => FALSE,
+      '#required' => TRUE,
+      '#default_value' => $this->options['format']['yAxis']['title']['align']['value'],
+    );
+
     $form['format']['tooltip']['formatter']['value'] = array(
       '#title' => t('Tool Tip Formatter'),
       '#type' => 'textarea',

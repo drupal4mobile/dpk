@@ -5,13 +5,19 @@
  * Plugin Theme File
  */
 function template_preprocess_views_highcharts(&$vars) {
-  $chart_id = "views-highcharts-" . uuid_uuid();
-
+  module_load_include("module", "libraries", "libraries");
+  if ($path = libraries_get_path("highcharts")) {
+    drupal_add_js($path . '/js/highcharts.js');
+  }
+  drupal_add_js(drupal_get_path('module', 'views_highcharts') . '/js/views_highcharts.js');
+  module_load_include('inc', 'uuid', 'uuid');
+  $chart_id = "views-highcharts-" . uuid_generate();
   $highcharts_config = json_decode(file_get_contents(drupal_get_path("module", "views_highcharts") . "/defaults/bar-basic.json"));
   $highcharts_config->chart->defaultSeriesType = $vars['options']['format']['chart']['type']['value'];
   $highcharts_config->title->text = $vars['options']['format']['title']['text']['value'];
   $highcharts_config->subtitle->text = $vars['options']['format']['subtitle']['text']['value'];
   $highcharts_config->yAxis->title->text = $vars['options']['format']['yAxis']['title']['text']['value'];
+  $highcharts_config->yAxis->title->align = $vars['options']['format']['yAxis']['title']['align']['value'];
 
   $highcharts_config->chart->renderTo = $chart_id;
   $view = $vars['view'];

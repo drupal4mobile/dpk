@@ -8,4 +8,4 @@
 
 
 ?>
-<div class="views-highchart-chart" id="<?php print($chart_id); ?>" style="margin: 0 auto"></div>
+<div class="views-highcharts-chart" id="<?php print($chart_id); ?>" style="margin: 0 auto"></div>
