@@ -1,14 +1,15 @@
 name = "DPK Mobile"
 description = "Ideal for small devices and/or for low-bandwidth consumers."
 core = 7.x
+base theme = jqm
+
 engine = phptemplate
-regions[help] = Help
-regions[navigation] = Navigation
 regions[content] = Content
+regions[content_bottom] = Content Bottom
+regions[header] = Header
+regions[footer] = Footer
 
 stylesheets[all][] = css/global.css
-stylesheets[screen and (orientation:landscape)][] = css/landscape.css
-stylesheets[screen and (orientation:portrait)][] = css/portrait.css
 scripts[] = js/global.js
 
 ; Information added by drupal.org packaging script on 2010-12-11

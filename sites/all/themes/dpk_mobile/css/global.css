@@ -6,3 +6,17 @@
 		column-count: 2;
 		column-gap: 1em;
 	}
+	
+	.node-franchise.view-mode-marker {
+		font: normal 10px/12px Helvetica, Arial, Sans;
+		margin: 0px; padding: 0px; 
+	}
+	.node-franchise.view-mode-marker .field-label {
+		font: bolder 10px/12px Helvetica, Arial, Sans; display:inline; 
+	}
+	.view-mode-marker .country-name { display:none; }
+	
+	.view-menu .group-left { width: 75%; }
+	.view-menu .group-right { width: 20%; }
+	.field-type-number-decimal .field-item:before { content: '$';}
+	.

@@ -30,20 +30,45 @@ function dpk_mobile_preprocess_html(&$vars) {
     $vars['rdf']->namespaces = '';
     $vars['rdf']->profile = '';
   }
+
 }
 
+function dpk_mobile_process_page(&$variables) {
+  // make sure we have the library installed
+  if (module_exists('jquerymobile')) {
+    jquerymobile_add();
+  }
+  else {
+    drupal_set_message('jQuery Mobile is not installed. This theme will not function as expected without it. <a href="http://drupal.org/projects/jquerymobile" target="_blank">Download the jQuery Mobile module.</a>', 'error');
+  }
+  // set defaults for the main page if they haven't been set elsewhere
+  if (!isset($variables['jqm_page_id'])) {
+    $variables['jqm_page_id'] = 'main-page' . str_replace('/', '-', request_uri());
+  }
+  if (!isset($variables['page_data_theme'])) {
+    $variables['page_data_theme'] = theme_get_setting('jqm_page_data_theme');
+  }
 
+  if (!isset($variables['jqm_content_data_theme'])) {
+    $variables['jqm_content_data_theme'] = theme_get_setting('jqm_content_data_theme');
+  }
+}
 
 /**
  * Override or insert variables into the page template.
  */
 function dpk_mobile_preprocess_page(&$vars) {
+	if (module_exists('jquerymobile')) {
+	    jquerymobile_add();
+	  }
   // Move secondary tabs into a separate variable.
   $vars['tabs2'] = array(
     '#theme' => 'menu_local_tasks',
     '#secondary' => $vars['tabs']['#secondary'],
   );
   unset($vars['tabs']['#secondary']);
+
+  $vars['is_front'] = drupal_is_front_page();
 
   if (isset($vars['main_menu'])) {
     $vars['primary_nav'] = theme('links__system_main_menu', array(
@@ -81,10 +106,7 @@ function dpk_mobile_preprocess_page(&$vars) {
   else {
     $vars['secondary_nav'] = FALSE;
   }
-
-
-
- 
+	
 	$search = drupal_get_form('search_form', NULL, (isset($searchTerm) ? $searchTerm : ''));
 	$search['basic']['keys']['#type'] = "search";
 	$search['basic']['keys']['#size'] = "20";
@@ -104,3 +126,7 @@ function dpk_mobile_preprocess_page(&$vars) {
 function dpk_mobile_preprocess_search_block_form(&$vars) {
   $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
 }
+
+
+
+

@@ -1,0 +1,14 @@
+<?php
+
+
+function rendered_node_rest_server_response_formatters_alter(&$formatters) {
+
+	// Add a html response format.
+  $formatters['html'] = array(
+    'mime types' => array('text/html'),
+    'view' => 'RESTRenderedNode',
+    'view arguments' => array('format' => 'html'),
+	'file' => 'rendered_node.inc'
+  );
+  
+}

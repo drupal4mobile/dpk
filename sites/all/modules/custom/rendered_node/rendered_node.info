@@ -1,0 +1,7 @@
+name = Rendered Node
+description = Service to return rendered nodes
+package = Services
+core = 7.x
+php = 5.x
+
+files[] = rendered_node.inc
