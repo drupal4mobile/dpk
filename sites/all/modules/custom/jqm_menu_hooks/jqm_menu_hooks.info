@@ -1,0 +1,7 @@
+name = jQueryMobile Menu Hooks
+description = "Adds options to menu items related to jQuery Mobile."
+version = VERSION
+core = 7.x
+version = "7.x-1.x-dev"
+project = "jquerymobile"
+dependencies[] = jquerymobile

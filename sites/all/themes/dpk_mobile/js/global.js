@@ -20,22 +20,42 @@
 				$.ajax({
 					url: "/rest/user/login.json",
 					dataType: "json",
+					data: $(this).serialize(),
+					type: "post",
+					error: function(jqXHR, textStatus, errorThrown) {
+						$("#form-errors").html(jqXHR.responseText()).show();
+					},
+					complete: function(jqXHR, textStatus){
+						if (textStatus != "error") {
+							document.location.href = "/";
+						}
+					}
+				});
+			});
+			
+			$("#user-register-form").submit(function(evt){
+				if (evt) { evt.preventDefault(); }
+				$.ajax({
+					url: "/rest/user/register.json",
+					dataType: "json",
 					data: toSubmit,
 					type: "post",
 					error: function(jqXHR, textStatus, errorThrown) {
 						$("#form-errors").html(print_r(jqXHR)).show();
 					},
 					complete: function(jqXHR, textStatus){
-						document.location.href = "/";
+						if (textStatus != "error") {
+							document.location.href = "/";
+						}
 					}
 				});
 			});
+			
 			$("#user-logout").click(function(evt) {
 				if (evt) { evt.preventDefault(); }
 				$.mobile.showPageLoadingMsg();
 				document.location.href = "/user/logout";
-				
-			})
+			});
 		},
 		detach: function(context){
 		}

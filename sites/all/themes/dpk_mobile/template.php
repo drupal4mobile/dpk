@@ -128,5 +128,25 @@ function dpk_mobile_preprocess_search_block_form(&$vars) {
 }
 
 
+function phptemplate_menu_item($link, $has_children, $menu = '', $in_active_trail = FALSE, $extra_class = NULL) {
+    $class = ($menu ? 'expanded' : ($has_children ? 'collapsed' : 'leaf'));
+  if (!empty($extra_class)) {
+    $class .= ' '. $extra_class;
+  }
+  if ($in_active_trail) {
+    $class .= ' active-trail';
+  }
 
+  if (!empty($link)) {
+            // remove all HTML tags and make everything lowercase
+            $css_id = strtolower(strip_tags($link));
+            // remove colons and anything past colons
+            if (strpos($css_id, ':')) $css_id = substr ($css_id, 0, strpos($css_id, ':'));
+            // Preserve alphanumerics, everything else goes away
+            $pattern = '/[^a-z]+/ ';
+            $css_id = preg_replace($pattern, '', $css_id);
+            $class .= ' '. $css_id;
+    }
+    return '<li class="'. $class .'" rel="blah" >'. $link . $menu ."</li>\n";
+}
 

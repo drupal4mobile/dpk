@@ -1,5 +1,15 @@
 <?php
 
+function rendered_node_theme() {
+	return array(
+		"rendered_node_content" => array(
+			"arguments" => array("node" => null, "build" => null),
+			"template" => "rendered_node_content"
+		)
+		
+	);
+}
+
 
 function rendered_node_rest_server_response_formatters_alter(&$formatters) {
 

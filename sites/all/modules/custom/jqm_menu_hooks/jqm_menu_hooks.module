@@ -1,0 +1,19 @@
+<?php
+
+
+function jqm_menu_hooks_menu_attribute_info() {
+	$info = array();
+	
+	$info['data-ajax'] = array(
+	    'label' => t('jQuery Mobile data-ajax=FALSE'),
+		
+	    'description' => t('Prevent the menu item from loading via ajax in the jQuery mobile environment. Default is true. Checking this box makes the value false.'),
+		"form" => array(
+			'#type' => "checkbox",
+			'#default_value' => false,
+			"#return_value" => "false"
+		)
+	  );
+	
+	return $info;
+}

@@ -355,7 +355,7 @@ span.form-required {
 #main-header { background: #aaa;  height: 110px;  }
 #main-header .container { width: 1000px; margin: 0px auto; position: relative; height: 110px; }
 #main-header h1 { position: absolute; top: 10px; left: -10px;  }
-#main-header h1 a { width: 296px; height: 108px; text-indent: -9999px; display:block; 
+#main-header h1 a { width: 296px; height: 100px; text-indent: -9999px; display:block; 
 		background: transparent url(../images/logo.png) no-repeat center center; 
 		}
 .region-header {
@@ -1351,3 +1351,11 @@ body.front .block-views .view-content { padding: 10px; }
 		column-count: 4;
 		column-gap: 1em;
 	}
+	.node-franchise.view-mode-marker {
+		font: normal 10px/12px Helvetica, Arial, Sans;
+		margin: 0px; padding: 0px; 
+	}
+	.node-franchise.view-mode-marker .field-label {
+		font: bolder 10px/12px Helvetica, Arial, Sans; display:inline; 
+	}
+	.view-mode-marker .country-name { display:none; }

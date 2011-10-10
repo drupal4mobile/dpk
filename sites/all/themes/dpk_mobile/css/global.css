@@ -1,3 +1,10 @@
+body { font: normal 10pt/12pt Helvetica, Arial, Sans-Serif; color: #666; }
+p { font: normal 10pt/12pt Helvetica, Arial, Sans-Serif; color: #666; margin: .25em 0;}
+h1 { font-family:"Helvetica W01 Blk", sans-serif; font-size: 2em; }
+h2 { font-family:"Helvetica W01 Blk", sans-serif; font-size: 1.5em; }
+h3 { font-family:"Helvetica W01 Blk", sans-serif; font-size: 1.25em; }
+
+
 .close2u-list { 
 		-moz-column-count: 2;
 		-moz-column-gap: 1em;
@@ -16,7 +23,16 @@
 	}
 	.view-mode-marker .country-name { display:none; }
 	
-	.view-menu .group-left { width: 75%; }
-	.view-menu .group-right { width: 20%; }
-	.field-type-number-decimal .field-item:before { content: '$';}
-	.
+	.view-menu .group-left { width: 60%; }
+	.view-menu .group-right { width: 40%; }
+	.view-menu .group-right .field  { text-align: right; }
+	.view-menu .field-type-number-decimal .field-item:before { content: '$';}
+	.view-menu .field-name-field-items.field-type-node-reference { margin: 1px solid #666; padding: 20px; }
+	.view-menu .field-label-inline .field-label, 
+	.view-menu .field-label-inline .field-items, 
+	.view-menu .field-label-inline .field-items .field-item  
+		{ display:inline; }
+	.block > h2 { display:none; }
+	#admin-menu { display:none; }
+	#block-system-main { display:none;}
+

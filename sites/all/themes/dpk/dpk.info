@@ -7,7 +7,6 @@ stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 scripts[] = js/global.js
 
-
 ; Information added by drupal.org packaging script on 2011-01-05
 version = "7.0"
 
