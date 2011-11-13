@@ -85,6 +85,9 @@ function close2u_page($delta) {
 
 //default search is nodes, but you can also search for users by type = 'uid'
 function close2u_find($type = "node", $origin = NULL) {
+	variable_set("location_default_distance_unit", "miles");
+	$distance_unit = variable_get("location_default_distance_unit", "km");
+	
   if ($origin == NULL) {
     if (isset($_REQUEST['longitude']) && isset($_REQUEST["latitude"])) {
       $origin = $_REQUEST;
@@ -122,6 +125,8 @@ function close2u_find($type = "node", $origin = NULL) {
 		$toReturn = "<ul class='close2u-list'>";
 		while ($result = $results->fetchObject()) {
 		    $result->node = node_load($result->nid);
+			$result->distance = array("raw" => $result->distance, 'scalar' => round($result->distance/(($distance_unit == 'km') ? 1000.0 : 1609.347), 1), 'distance_unit' => $distance_unit);
+			//$toReturn .= print_r($result, true);
 		    $toReturn .= theme("close2u_list_item", array("result" => $result));
 		}
 		$toReturn .= "</ul>";
@@ -156,24 +161,5 @@ function close2u_marker_retrieve($node) {
 	exit();
 }
 
-function close2u_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "ds" && $api == "ds") {
-    return array("version" => "1");
-  }
-}
 
-function close2u_ds_view_modes_info() {
-  $export = array();
 
-  $ds_view_mode = new stdClass;
-  $ds_view_mode->api_version = 1;
-  $ds_view_mode->view_mode = 'marker';
-  $ds_view_mode->label = 'Marker';
-  $ds_view_mode->entities = array(
-    'node' => 'node',
-  );
-  $export['mobile'] = $ds_view_mode;
-
-  return $export;
-}
