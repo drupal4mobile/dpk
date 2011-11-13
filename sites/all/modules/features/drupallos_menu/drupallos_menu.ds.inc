@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_ds_field_settings_info().
+ * Implements hook_ds_field_settings_info().
  */
 function drupallos_menu_ds_field_settings_info() {
   $export = array();
@@ -17,15 +17,10 @@ function drupallos_menu_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'menu_item_group';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'title' => array(
+    'title_divider' => array(
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '0',
-        'wrapper' => 'h1',
-        'class' => '',
-      ),
     ),
   );
   $export['node|menu_item_group|default'] = $ds_fieldsetting;
@@ -37,6 +32,11 @@ function drupallos_menu_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'menu_item';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'related_products_add_to_cart' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'title' => array(
       'weight' => '0',
       'label' => 'hidden',
@@ -58,13 +58,13 @@ function drupallos_menu_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
         'link' => '0',
         'wrapper' => 'h3',
-        'class' => '',
+        'class' => 'ui-li-heading',
       ),
     ),
   );
@@ -77,6 +77,11 @@ function drupallos_menu_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'pizza';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'related_products_add_to_cart' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'title' => array(
       'weight' => '0',
       'label' => 'hidden',
@@ -97,6 +102,11 @@ function drupallos_menu_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'pizza';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
+    'related_products_add_to_cart' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'title' => array(
       'weight' => '0',
       'label' => 'hidden',
@@ -157,6 +167,11 @@ function drupallos_menu_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'soup';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'related_products_add_to_cart' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'title' => array(
       'weight' => '0',
       'label' => 'hidden',
@@ -169,7 +184,7 @@ function drupallos_menu_ds_field_settings_info() {
 }
 
 /**
- * Implementation of hook_ds_layout_settings_info().
+ * Implements hook_ds_layout_settings_info().
  */
 function drupallos_menu_ds_layout_settings_info() {
   $export = array();
@@ -180,18 +195,19 @@ function drupallos_menu_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'menu_item_group';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
     'hide_empty_regions' => 0,
+    'hide_sidebars' => 0,
     'regions' => array(
-      'ds_content' => array(
-        0 => 'title',
+      'header' => array(
+        0 => 'title_divider',
         1 => 'field_items',
       ),
     ),
     'fields' => array(
-      'title' => 'ds_content',
-      'field_items' => 'ds_content',
+      'title_divider' => 'header',
+      'field_items' => 'header',
     ),
     'classes' => array(),
   );
@@ -206,23 +222,30 @@ function drupallos_menu_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
     'hide_empty_regions' => 1,
+    'hide_sidebars' => 0,
     'regions' => array(
-      'header' => array(
-        0 => 'title',
-      ),
       'left' => array(
-        0 => 'body',
+        0 => 'title',
+        1 => 'body',
       ),
-      'right' => array(
+      'footer' => array(
+        0 => 'related_products_add_to_cart',
+      ),
+      'header' => array(
         0 => 'field_price',
       ),
     ),
     'fields' => array(
-      'title' => 'header',
+      'title' => 'left',
+      'related_products_add_to_cart' => 'footer',
       'body' => 'left',
-      'field_price' => 'right',
+      'field_price' => 'header',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'header' => array(
+        'ui-li-aside' => 'ui-li-aside',
+      ),
+    ),
   );
   $export['node|menu_item|default'] = $ds_layout;
 
@@ -235,23 +258,26 @@ function drupallos_menu_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
     'hide_empty_regions' => 1,
+    'hide_sidebars' => 0,
     'regions' => array(
       'header' => array(
         0 => 'title',
+        1 => 'body',
       ),
-      'left' => array(
-        0 => 'body',
-      ),
-      'right' => array(
+      'footer' => array(
         0 => 'field_price',
       ),
     ),
     'fields' => array(
       'title' => 'header',
-      'body' => 'left',
-      'field_price' => 'right',
+      'field_price' => 'footer',
+      'body' => 'header',
     ),
-    'classes' => array(),
+    'classes' => array(
+      'footer' => array(
+        'ui-li-aside' => 'ui-li-aside',
+      ),
+    ),
   );
   $export['node|menu_item|full'] = $ds_layout;
 
@@ -263,23 +289,26 @@ function drupallos_menu_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
-    'hide_empty_regions' => 1,
+    'hide_empty_regions' => 0,
+    'hide_sidebars' => 0,
     'regions' => array(
       'header' => array(
         0 => 'title',
       ),
+      'right' => array(
+        0 => 'related_products_add_to_cart',
+        1 => 'field_slice',
+        2 => 'field_small',
+        3 => 'field_medium',
+        4 => 'field_large',
+      ),
       'left' => array(
         0 => 'body',
-      ),
-      'right' => array(
-        0 => 'field_slice',
-        1 => 'field_small',
-        2 => 'field_medium',
-        3 => 'field_large',
       ),
     ),
     'fields' => array(
       'title' => 'header',
+      'related_products_add_to_cart' => 'right',
       'body' => 'left',
       'field_slice' => 'right',
       'field_small' => 'right',
@@ -299,27 +328,20 @@ function drupallos_menu_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
     'hide_empty_regions' => 0,
+    'hide_sidebars' => 0,
     'regions' => array(
       'header' => array(
         0 => 'title',
+        1 => 'body',
       ),
-      'left' => array(
-        0 => 'body',
-      ),
-      'right' => array(
-        0 => 'field_slice',
-        1 => 'field_small',
-        2 => 'field_medium',
-        3 => 'field_large',
+      'footer' => array(
+        0 => 'related_products_add_to_cart',
       ),
     ),
     'fields' => array(
       'title' => 'header',
-      'body' => 'left',
-      'field_slice' => 'right',
-      'field_small' => 'right',
-      'field_medium' => 'right',
-      'field_large' => 'right',
+      'related_products_add_to_cart' => 'footer',
+      'body' => 'header',
     ),
     'classes' => array(),
   );
@@ -334,12 +356,13 @@ function drupallos_menu_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
     'hide_empty_regions' => 1,
+    'hide_sidebars' => 0,
     'regions' => array(
-      'left' => array(
-        0 => 'body',
-      ),
       'header' => array(
         0 => 'title',
+      ),
+      'left' => array(
+        0 => 'body',
       ),
       'right' => array(
         0 => 'field_regular',
@@ -347,8 +370,8 @@ function drupallos_menu_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'body' => 'left',
       'title' => 'header',
+      'body' => 'left',
       'field_regular' => 'right',
       'field_footlong' => 'right',
     ),
@@ -396,9 +419,13 @@ function drupallos_menu_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
     'hide_empty_regions' => 1,
+    'hide_sidebars' => 0,
     'regions' => array(
       'header' => array(
         0 => 'title',
+      ),
+      'footer' => array(
+        0 => 'related_products_add_to_cart',
       ),
       'left' => array(
         0 => 'body',
@@ -410,6 +437,7 @@ function drupallos_menu_ds_layout_settings_info() {
     ),
     'fields' => array(
       'title' => 'header',
+      'related_products_add_to_cart' => 'footer',
       'body' => 'left',
       'field_cup' => 'right',
       'field_bowl' => 'right',

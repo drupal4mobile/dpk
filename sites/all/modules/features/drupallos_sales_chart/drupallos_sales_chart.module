@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drupallos Sales Chart feature.
+ */
+
+include_once('drupallos_sales_chart.features.inc');

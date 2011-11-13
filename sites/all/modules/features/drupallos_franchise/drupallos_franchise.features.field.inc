@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_field_default_fields().
+ * Implements hook_field_default_fields().
  */
 function drupallos_franchise_field_default_fields() {
   $fields = array();
@@ -40,7 +40,11 @@ function drupallos_franchise_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'franchise',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => 'Sun-Thu 11am-10pm',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -51,11 +55,19 @@ function drupallos_franchise_field_default_fields() {
           'type' => 'text_default',
           'weight' => '1',
         ),
+        'marker' => array(
+          'label' => 'inline',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '2',
+        ),
         'teaser' => array(
           'label' => 'above',
+          'module' => 'text',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'text_default',
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',

@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_field_default_fields().
+ * Implements hook_field_default_fields().
  */
 function drupallos_menu_field_default_fields() {
   $fields = array();
@@ -56,6 +56,13 @@ function drupallos_menu_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
+          'weight' => '2',
+        ),
+        'mobile' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
           'weight' => '1',
         ),
         'teaser' => array(
@@ -65,7 +72,7 @@ function drupallos_menu_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => 0,
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -138,11 +145,23 @@ function drupallos_menu_field_default_fields() {
           'type' => 'number_decimal',
           'weight' => '2',
         ),
+        'mobile' => array(
+          'label' => 'hidden',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => 1,
+            'scale' => '2',
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_decimal',
+          'weight' => '2',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -162,6 +181,81 @@ function drupallos_menu_field_default_fields() {
         'settings' => array(),
         'type' => 'number',
         'weight' => '-3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-menu_item-field_product'
+  $fields['node-menu_item-field_product'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_product',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'target_entity' => array(
+          0 => 'target_type',
+          1 => 'target_id',
+        ),
+      ),
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(),
+        ),
+        'handler_submit' => 'Change handler',
+        'target_type' => 'commerce_product',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'menu_item',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'mobile' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_product',
+      'label' => 'Related Product',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '31',
       ),
     ),
   );
@@ -355,6 +449,13 @@ function drupallos_menu_field_default_fields() {
           'type' => 'text_default',
           'weight' => '1',
         ),
+        'mobile' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
+        ),
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -425,14 +526,14 @@ function drupallos_menu_field_default_fields() {
         ),
         'full' => array(
           'label' => 'inline',
-          'module' => 'number',
-          'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
-            'scale' => 2,
-            'thousand_separator' => ' ',
-          ),
-          'type' => 'number_decimal',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '5',
+        ),
+        'mobile' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => '5',
         ),
         'teaser' => array(
@@ -502,14 +603,14 @@ function drupallos_menu_field_default_fields() {
         ),
         'full' => array(
           'label' => 'inline',
-          'module' => 'number',
-          'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
-            'scale' => 2,
-            'thousand_separator' => ' ',
-          ),
-          'type' => 'number_decimal',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
+        'mobile' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => '4',
         ),
         'teaser' => array(
@@ -536,6 +637,85 @@ function drupallos_menu_field_default_fields() {
         'settings' => array(),
         'type' => 'number',
         'weight' => '-1',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-pizza-field_product'
+  $fields['node-pizza-field_product'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_product',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'target_entity' => array(
+          0 => 'target_type',
+          1 => 'target_id',
+        ),
+      ),
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(),
+        ),
+        'handler_submit' => 'Change handler',
+        'target_type' => 'commerce_product',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'pizza',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '6',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '6',
+        ),
+        'mobile' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '0',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_product',
+      'label' => 'Related Product',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
+        'type' => 'entityreference_autocomplete',
+        'weight' => '32',
       ),
     ),
   );
@@ -579,14 +759,14 @@ function drupallos_menu_field_default_fields() {
         ),
         'full' => array(
           'label' => 'inline',
-          'module' => 'number',
-          'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
-            'scale' => 2,
-            'thousand_separator' => ' ',
-          ),
-          'type' => 'number_decimal',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
+        ),
+        'mobile' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => '2',
         ),
         'teaser' => array(
@@ -656,14 +836,14 @@ function drupallos_menu_field_default_fields() {
         ),
         'full' => array(
           'label' => 'inline',
-          'module' => 'number',
-          'settings' => array(
-            'decimal_separator' => '.',
-            'prefix_suffix' => TRUE,
-            'scale' => 2,
-            'thousand_separator' => ' ',
-          ),
-          'type' => 'number_decimal',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'mobile' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => '3',
         ),
         'teaser' => array(
@@ -736,6 +916,13 @@ function drupallos_menu_field_default_fields() {
           'weight' => '0',
         ),
         'full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '0',
+        ),
+        'mobile' => array(
           'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
@@ -822,6 +1009,18 @@ function drupallos_menu_field_default_fields() {
           'type' => 'number_decimal',
           'weight' => '0',
         ),
+        'mobile' => array(
+          'label' => 'inline',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 2,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_decimal',
+          'weight' => '2',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -846,6 +1045,88 @@ function drupallos_menu_field_default_fields() {
         'settings' => array(),
         'type' => 'number',
         'weight' => '-2',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-sandwich-field_product'
+  $fields['node-sandwich-field_product'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_product',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'target_entity' => array(
+          0 => 'target_type',
+          1 => 'target_id',
+        ),
+      ),
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(),
+        ),
+        'handler_submit' => 'Change handler',
+        'target_type' => 'commerce_product',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'sandwich',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 3,
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'mobile' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_product',
+      'label' => 'Related Product',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
+        'type' => 'entityreference_autocomplete',
+        'weight' => '32',
       ),
     ),
   );
@@ -898,6 +1179,18 @@ function drupallos_menu_field_default_fields() {
           ),
           'type' => 'number_decimal',
           'weight' => '0',
+        ),
+        'mobile' => array(
+          'label' => 'inline',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 2,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_decimal',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -968,6 +1261,20 @@ function drupallos_menu_field_default_fields() {
           'type' => 'text_default',
           'weight' => '1',
         ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
+        ),
+        'mobile' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
+        ),
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -1025,6 +1332,24 @@ function drupallos_menu_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
+          'label' => 'inline',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 2,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_decimal',
+          'weight' => '3',
+        ),
+        'full' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '3',
+        ),
+        'mobile' => array(
           'label' => 'inline',
           'module' => 'number',
           'settings' => array(
@@ -1101,6 +1426,24 @@ function drupallos_menu_field_default_fields() {
           'type' => 'number_decimal',
           'weight' => '2',
         ),
+        'full' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
+        ),
+        'mobile' => array(
+          'label' => 'inline',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 2,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_decimal',
+          'weight' => '2',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1129,6 +1472,85 @@ function drupallos_menu_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-soup-field_product'
+  $fields['node-soup-field_product'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_product',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'target_entity' => array(
+          0 => 'target_type',
+          1 => 'target_id',
+        ),
+      ),
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(),
+        ),
+        'handler_submit' => 'Change handler',
+        'target_type' => 'commerce_product',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'soup',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
+        'mobile' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_product',
+      'label' => 'Related Product',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
+        'type' => 'entityreference_autocomplete',
+        'weight' => '32',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('14" - Small');
@@ -1141,6 +1563,7 @@ function drupallos_menu_field_default_fields() {
   t('Items');
   t('Price');
   t('Regular');
+  t('Related Product');
   t('Slice');
   t('Sort Weight');
 

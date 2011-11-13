@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_ds_field_settings_info().
+ * Implements hook_ds_field_settings_info().
  */
 function drupallos_franchise_ds_field_settings_info() {
   $export = array();
@@ -34,7 +34,7 @@ function drupallos_franchise_ds_field_settings_info() {
 }
 
 /**
- * Implementation of hook_ds_custom_fields_info().
+ * Implements hook_ds_custom_fields_info().
  */
 function drupallos_franchise_ds_custom_fields_info() {
   $export = array();
@@ -65,7 +65,7 @@ function drupallos_franchise_ds_custom_fields_info() {
 }
 
 /**
- * Implementation of hook_ds_layout_settings_info().
+ * Implements hook_ds_layout_settings_info().
  */
 function drupallos_franchise_ds_layout_settings_info() {
   $export = array();

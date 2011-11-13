@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_ctools_plugin_api().
+ * Implements hook_ctools_plugin_api().
  */
 function drupallos_franchise_ctools_plugin_api() {
   list($module, $api) = func_get_args();
@@ -19,7 +19,7 @@ function drupallos_franchise_ctools_plugin_api() {
 }
 
 /**
- * Implementation of hook_node_info().
+ * Implements hook_node_info().
  */
 function drupallos_franchise_node_info() {
   $items = array(
