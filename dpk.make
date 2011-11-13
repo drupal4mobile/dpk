@@ -8,7 +8,10 @@ projects[drupal][download][tag] = "7.9"
 projects[drupal][download][url] = "http://git.drupal.org/project/drupal.git"
 
 ;Contrib projects 
+projects[admin_menu][subdir] = "contrib"
 projects[backup_migrate][subdir] = "contrib"
+projects[contentapi][subdir] = "contrib"
+projects[contentapi][version] = "1.0-alpha2"
 projects[ckeditor][subdir] = "contrib"
 projects[commerce][subdir] = "contrib"
 projects[commerce_custom_line_items][subdir] = "contrib"
@@ -22,6 +25,7 @@ projects[domain_ctools][version] = "1.1"
 projects[domain_views][subdir] = "contrib"
 projects[ds][subdir] = "contrib"
 projects[entity][subdir] = "contrib"
+projects[entityreference][subdir] = "contrib"
 projects[features][subdir] = 'contrib'
 projects[footermap][subdir] = 'contrib'
 projects[gmap][subdir] = "contrib"
