@@ -4,12 +4,15 @@ api = 2
 ;core
 projects[drupal][type] = "core"
 projects[drupal][download][type] = "git"
-projects[drupal][download][tag] = "7.7"
+projects[drupal][download][tag] = "7.8"
 projects[drupal][download][url] = "http://git.drupal.org/project/drupal.git"
 
 ;Contrib projects 
 projects[backup_migrate][subdir] = "contrib"
 projects[ckeditor][subdir] = "contrib"
+projects[commerce][subdir] = "contrib"
+projects[commerce_custom_line_items][subdir] = "contrib"
+projects[commerce_custom_line_items][version] = '1.x-dev'
 projects[context][subdir] = "contrib"
 projects[ctools][subdir] = "contrib"
 projects[diff][subdir] = 'contrib'
@@ -23,12 +26,12 @@ projects[features][subdir] = 'contrib'
 projects[footermap][subdir] = 'contrib'
 projects[gmap][subdir] = "contrib"
 projects[gmap][version] = "1.x-dev"
+projects[highcharts][subdir] = "contrib"
 projects[imagemagick][subdir] = 'contrib'
 projects[jquery_update][subdir] = 'contrib'
 projects[libraries][subdir] = "contrib"
 projects[location][subdir] = "contrib"
 projects[media][subdir] = "contrib"
-projects[media][version] = "2.x-dev"
 projects[media_youtube][subdir] = "contrib"
 projects[media_youtube][version] ="1.x-dev"
 projects[mediaelement][subdir] = "contrib"
@@ -42,9 +45,9 @@ projects[styles][subdir] = "contrib"
 projects[token][subdir] = "contrib"
 projects[views][subdir] = "contrib"
 projects[views_slideshow][subdir] = "contrib"
-projects[views_slideshow][version] = "3.0-alpha1"
 projects[webform][subdir] = "contrib"
 projects[uuid][subdir] = "contrib"
+projects[services][subdir] = "contrib"
 
 
 ; Libraries
