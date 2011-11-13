@@ -90,7 +90,7 @@ function close2u_views_default_views() {
   $handler->display->display_options['path'] = 'locations';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'locations';
-  $handler->display->display_options['menu']['name'] = 'features';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
   $export['locations'] = $view;
 
   return $export;
