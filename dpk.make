@@ -9,6 +9,7 @@ projects[drupal][download][url] = "http://git.drupal.org/project/drupal.git"
 
 ;Contrib projects 
 projects[admin_menu][subdir] = "contrib"
+projects[addressfield][subdir] = "contrib"
 projects[backup_migrate][subdir] = "contrib"
 projects[contentapi][subdir] = "contrib"
 projects[contentapi][version] = "1.0-alpha2"
@@ -44,6 +45,7 @@ projects[node_export][subdir] = 'contrib'
 projects[node_export][version] = "3.x-dev"
 projects[pathauto][subdir] = "contrib"
 projects[references][subdir] = "contrib"
+projects[rules][subdir] = "contrib"
 projects[strongarm][subdir] = 'contrib'
 projects[styles][subdir] = "contrib"
 projects[token][subdir] = "contrib"

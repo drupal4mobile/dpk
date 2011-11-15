@@ -1,0 +1,6 @@
+
+
+
+#commerce-checkout-form-checkout fieldset.cart_contents { float:left; width: 45%; margin-right: 5%;}
+#commerce-checkout-form-checkout fieldset.customer_profile_billing { float:left; width: 45%;  }
+#commerce-checkout-form-checkout fieldset.checkout-buttons {clear: both; }

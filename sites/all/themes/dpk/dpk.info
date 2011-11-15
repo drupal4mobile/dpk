@@ -3,8 +3,12 @@ description = A Theme.
 package = DPK
 version = VERSION
 core = 7.x
-stylesheets[all][] = css/style.css
+stylesheets[all][] = css/global.css
 stylesheets[print][] = css/print.css
+stylesheets[screen and (max-width: 480px)][] = css/global_480.css
+stylesheets[screen and (min-width: 481px) and (max-width: 1024px)][] = css/global_800.css
+stylesheets[screen and (min-width: 1024px)][] = css/global_1024.css
+
 scripts[] = js/global.js
 
 ; Information added by drupal.org packaging script on 2011-01-05
@@ -12,3 +16,4 @@ version = "7.0"
 
 features[] = main_menu
 features[] = secondary_menu
+
