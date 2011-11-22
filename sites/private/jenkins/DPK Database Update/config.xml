@@ -9,7 +9,7 @@
         <hudson.model.StringParameterDefinition>
           <name>DUMPFILE</name>
           <description></description>
-          <defaultValue>/var/www/sites/private/backup_migrate/manual/DrupallosPizzaKitchen-2011-10-10T00-31-14.mysql</defaultValue>
+          <defaultValue>/var/cache/drupal/backup_migrate/manual/DrupallosPizzaKitchen-2011-10-10T00-31-14.mysql</defaultValue>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
@@ -23,8 +23,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#mysql -u root -e &quot;create database IF NOT EXISTS dpk collate=&apos;utf8_general_ci&apos;;&quot;;
-#mysql -u root dpk &lt; $DUMPFILE
+      <command>mysql -u root -e &quot;create database IF NOT EXISTS dpk collate=&apos;utf8_general_ci&apos;;&quot;;
+mysql -u root dpk &lt; $DUMPFILE
 if [ -f /var/www/sites/default/settings.php ]
 then
      touch /var/www/sites/default/settings.php

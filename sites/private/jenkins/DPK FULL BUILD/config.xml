@@ -44,9 +44,19 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#when the files are checked out of repo they&apos;re in a workspace that&apos;s private to jenkins
+      <command>    #backup the files directory
+    tmp=&quot;/tmp/$BUILD_TAG&quot;;
+    mkdir &quot;$tmp&quot;
+
+if [-d /var/www/sites/default/files ]
+then
+    rsync /var/www/sites/default/files &quot;$tmp&quot;
+fi
+
+#when the files are checked out of repo they&apos;re in a workspace that&apos;s private to jenkins
 #this rsync copies them from the workspace to the /var/www directory
-rsync -avz . /var/www
+rsync -avz --delete --delete-excluded=sites/default/files/* --include=.htaccess . /var/www
+
 
 #change to the www dir
 cd /var/www
@@ -57,7 +67,11 @@ rsync -avz  sites/private/* /var/cache/drupal
 rm -Rf sites/private
 
 #have drush download all projects associated with this build
-drush make dpk.make --nocolor -y</command>
+drush make dpk.make --nocolor -y
+
+#restore the file directory
+rsync &quot;$tmp&quot; /var/www/sites/default/files
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

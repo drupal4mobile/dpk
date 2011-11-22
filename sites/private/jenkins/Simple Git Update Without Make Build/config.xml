@@ -44,11 +44,18 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#when the files are checked out of repo they&apos;re in a workspace that&apos;s private to jenkins
+      <command>#backup the files directory
+tmp=&quot;/tmp/$BUILD_TAG&quot;;
+mkdir &quot;$tmp&quot;
+
+if [-d /var/www/sites/default/files ]
+then
+    rsync /var/www/sites/default/files &quot;$tmp&quot;
+fi
+
+#when the files are checked out of repo they&apos;re in a workspace that&apos;s private to jenkins
 #this rsync copies them from the workspace to the /var/www directory
-chmod -R 777 /var/www/*
-rsync -avz --delete --exclude=sites/default/settings* . /var/www
-cp sites/default/settings.server.php /var/www/sites/default/settings.php
+rsync -avz --delete --delete-excluded=sites/default/files/* --include=.htaccess . /var/www
 
 #change to the www dir
 cd /var/www
@@ -56,7 +63,10 @@ cd /var/www
 #move the sites/private folder to someplace drupal and apache can read
 #this directory was created by the righscale scripts provided with this exercise. Script #3
 rsync -avz sites/private/* /var/cache/drupal
-rm -Rf sites/private</command>
+rm -Rf sites/private
+
+#restore the file directory
+rsync -avz &quot;$tmp&quot; /var/www/sites/default/files</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
