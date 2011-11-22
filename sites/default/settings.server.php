@@ -184,6 +184,7 @@ $databases = array (
     array (
       'database' => 'dpk',
       'username' => 'root',
+      'password' => '',
       'host' => 'localhost',
       'driver' => 'mysql',
       'prefix' => '',
