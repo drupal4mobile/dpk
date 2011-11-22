@@ -53,3 +53,6 @@ sleep 5
 
 rm /var/www/index.html
 echo "<?php phpinfo();" > /var/www/index.php
+
+mkdir /var/cache/drupal
+chown -R jenkins.adm /var/cache/drupal
