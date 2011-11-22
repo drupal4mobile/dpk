@@ -454,3 +454,5 @@ ini_set('session.cookie_lifetime', 2000000);
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+include DRUPAL_ROOT . 'sites/all/modules/contrib/domain/settings.inc';
