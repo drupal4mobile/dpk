@@ -27,8 +27,8 @@ cd /var/lib/jenkins/.drush
 chown -R jenkins.nogroup /var/lib/jenkins/.drush
 cd /var/lib/jenkins/jobs
 git clone http://github.com/stovak/dpk.git
-cp -R sites/private/jenkins/* .
-rm -Rf dpk_jenkins
+cp -R dpk/sites/private/jenkins/* .
+rm -Rf dpk
 chown -R jenkins.nogroup *
 
 cd /var/lib/jenkins/plugins
