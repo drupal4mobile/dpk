@@ -21,8 +21,6 @@ _new="\n\<Proxy \*\>\nOrder deny,allow\nAllow from all\n<\/Proxy>\nProxyPreserve
 chown -R jenkins.adm /var/www
 
 logger -t RightScale "\n\Adding Jenkins jobs..."
-/usr/bin/git config --global user.email "$ADMIN_EMAIL_ADDRESS"
-/usr/bin/git config --global user.name "Jenkins auto-build bot"
 /bin/mkdir /var/lib/jenkins/.drush
 cd /var/lib/jenkins/.drush
 /usr/bin/git clone --branch 6.x-2.x http://git.drupal.org/project/drush_make.git
@@ -35,13 +33,13 @@ chown -R jenkins.nogroup *
 
 cd /var/lib/jenkins/plugins
 
-curl -O http://updates.jenkins-ci.org/latest/git.hpi
-curl -O http://updates.jenkins-ci.org/latest/github.hpi
-curl -O http://updates.jenkins-ci.org/latest/github-oauth.hpi
-curl -O http://updates.jenkins-ci.org/latest/growl.hpi
-curl -O http://updates.jenkins-ci.org/latest/jabber.hpi
-curl -O http://updates.jenkins-ci.org/latest/skype-notifier.hpi
-curl -O http://updates.jenkins-ci.org/latest/ec2.hpi
+curl -OL http://updates.jenkins-ci.org/latest/git.hpi
+curl -OL http://updates.jenkins-ci.org/latest/github.hpi
+curl -OL http://updates.jenkins-ci.org/latest/github-oauth.hpi
+curl -OL http://updates.jenkins-ci.org/latest/growl.hpi
+curl -OL http://updates.jenkins-ci.org/latest/jabber.hpi
+curl -OL http://updates.jenkins-ci.org/latest/skype-notifier.hpi
+curl -OL http://updates.jenkins-ci.org/latest/ec2.hpi
 
 chown -R jenkins.nogroup *
 

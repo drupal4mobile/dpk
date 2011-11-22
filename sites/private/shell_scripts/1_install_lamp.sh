@@ -24,5 +24,6 @@ logger -t RightScale "\n\nInstalling PHP..."
 logger -t RightScale "\n\nInstalling Drush..."
 /usr/bin/pear channel-discover pear.drush.org
 /usr/bin/pear install drush/drush
+/usr/bin/pear install console_table
 
 logger -t RightScale "\n\nDrush installed..."
