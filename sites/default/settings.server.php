@@ -455,4 +455,4 @@ ini_set('session.cookie_lifetime', 2000000);
  */
 # $conf['allow_authorize_operations'] = FALSE;
 
-include DRUPAL_ROOT . 'sites/all/modules/contrib/domain/settings.inc';
+include DRUPAL_ROOT . '/sites/all/modules/contrib/domain/settings.inc';
