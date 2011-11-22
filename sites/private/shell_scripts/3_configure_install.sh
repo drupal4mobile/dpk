@@ -26,8 +26,8 @@ cd /var/lib/jenkins/.drush
 /usr/bin/git clone --branch 6.x-2.x http://git.drupal.org/project/drush_make.git
 chown -R jenkins.nogroup /var/lib/jenkins/.drush
 cd /var/lib/jenkins/jobs
-git clone http://github.com/stovak/dpk_jenkins
-cp -R dpk_jenkins/* .
+git clone http://github.com/stovak/dpk.git
+cp -R sites/private/jenkins/* .
 rm -Rf dpk_jenkins
 chown -R jenkins.nogroup *
 

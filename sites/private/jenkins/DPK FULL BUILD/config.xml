@@ -44,9 +44,20 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>rsync -avz . /var/www
+      <command>#when the files are checked out of repo they&apos;re in a workspace that&apos;s private to jenkins
+#this rsync copies them from the workspace to the /var/www directory
+rsync -avz . /var/www
+
+#change to the www dir
 cd /var/www
-drush make dpk.make</command>
+
+#move the sites/private folder to someplace drupal and apache can read
+#this directory was created by the righscale scripts provided with this exercise. Script #3
+rsync -avz  sites/private/* /var/cache/drupal
+rm -Rf sites/private
+
+#have drush download all projects associated with this build
+drush make dpk.make --nocolor -y</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

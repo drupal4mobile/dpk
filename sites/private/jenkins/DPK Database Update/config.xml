@@ -23,8 +23,20 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>mysql -u root -e &quot;create database IF NOT EXISTS dpk collate=&apos;utf8_general_ci&apos;;&quot;;
-mysql -u root dpk &lt; $DUMPFILE</command>
+      <command>#mysql -u root -e &quot;create database IF NOT EXISTS dpk collate=&apos;utf8_general_ci&apos;;&quot;;
+#mysql -u root dpk &lt; $DUMPFILE
+if [ -f /var/www/sites/default/settings.php ]
+then
+     touch /var/www/sites/default/settings.php
+else
+     cp /var/www/sites/default/settings.server.php /var/www/sites/default/settings.php
+fi
+cd /var/www
+/bin/chmod -R 777 sites/default
+/bin/chmod 555 sites/default/settings.php
+drush vset -y file_temporary_path /tmp
+drush vset -y file_private_path /var/cache/drupal
+drush cc --nocolor all </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
