@@ -4,7 +4,7 @@ api = 2
 ;core
 projects[drupal][type] = "core"
 projects[drupal][download][type] = "git"
-projects[drupal][download][tag] = "7.9"
+projects[drupal][download][tag] = "7.10"
 projects[drupal][download][url] = "http://git.drupal.org/project/drupal.git"
 
 ;Contrib projects 
@@ -33,7 +33,9 @@ projects[gmap][subdir] = "contrib"
 projects[gmap][version] = "1.x-dev"
 projects[highcharts][subdir] = "contrib"
 projects[imagemagick][subdir] = 'contrib'
+projects[itoggle][subdir] = 'contrib'
 projects[jquery_update][subdir] = 'contrib'
+projects[jquerymobile][subdir] = 'contrib'
 projects[libraries][subdir] = "contrib"
 projects[location][subdir] = "contrib"
 projects[media][subdir] = "contrib"
@@ -54,6 +56,8 @@ projects[views_slideshow][subdir] = "contrib"
 projects[webform][subdir] = "contrib"
 projects[uuid][subdir] = "contrib"
 projects[services][subdir] = "contrib"
+projects[] = 'jqm'
+projects[] = "registry_rebuild"
 
 
 ; Libraries
@@ -77,8 +81,22 @@ libraries[mediaelement][download][url] = 'git://github.com/johndyer/mediaelement
 libraries[mediaelement][directory_name] = 'mediaelement'
 libraries[mediaelement][destination] = 'libraries'
 
-libraries[highcharts][download][type] = 'get'
-libraries[highcharts][download][url] = 'http://www.highcharts.com/downloads/zips/Highcharts-2.1.6.zip'
+libraries[highcharts][download][type] = 'git'
+libraries[highcharts][download][url] = 'https://github.com/highslide-software/highcharts.com.git'
+libraries[highcharts][download][tag] = "v2.1.9"
 libraries[highcharts][directory_name] = 'highcharts'
 libraries[highcharts][destination] = 'libraries'
+
+libraries[jquerymobile][download][type] = "git"
+libraries[jquerymobile][download][tag] = "1.0"
+libraries[jquerymobile][download][url] = "https://github.com/jquery/jquery-mobile.git"
+libraries[jquerymobile][directory_name] = 'jquerymobile'
+libraries[jquerymobile][destination] = 'libraries'
+
+libraries[spyc][download][type] = 'get'
+libraries[spyc][download][url] = 'http://spyc.googlecode.com/svn/trunk/spyc.php'
+libraries[spyc][directory_name] = "spyc"
+libraries[spyc][destination] = 'libraries'
+
+
 
