@@ -4,7 +4,7 @@ api = 2
 ;core
 projects[drupal][type] = "core"
 projects[drupal][download][type] = "git"
-projects[drupal][download][tag] = "7.10"
+projects[drupal][download][tag] = "7.12"
 projects[drupal][download][url] = "http://git.drupal.org/project/drupal.git"
 
 ;Contrib projects 
@@ -22,7 +22,6 @@ projects[ctools][subdir] = "contrib"
 projects[diff][subdir] = 'contrib'
 projects[domain][subdir] = "contrib"
 projects[domain_ctools][subdir] = "contrib"
-projects[domain_ctools][version] = "1.1"
 projects[domain_views][subdir] = "contrib"
 projects[ds][subdir] = "contrib"
 projects[entity][subdir] = "contrib"
@@ -81,9 +80,8 @@ libraries[mediaelement][download][url] = 'git://github.com/johndyer/mediaelement
 libraries[mediaelement][directory_name] = 'mediaelement'
 libraries[mediaelement][destination] = 'libraries'
 
-libraries[highcharts][download][type] = 'git'
-libraries[highcharts][download][url] = 'https://github.com/highslide-software/highcharts.com.git'
-libraries[highcharts][download][tag] = "v2.1.9"
+libraries[highcharts][download][type] = 'get'
+libraries[highcharts][download][url] = 'http://www.highcharts.com/downloads/zips/Highcharts-2.2.0.zip'
 libraries[highcharts][directory_name] = 'highcharts'
 libraries[highcharts][destination] = 'libraries'
 
